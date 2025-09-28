@@ -1,5 +1,5 @@
 // ********** VARIÁVEIS DE CONTROLE **********
-const totalMenuPages = 6; // Total de páginas do seu cardápio
+const totalMenuPages = 7; // Total de páginas do seu cardápio
 let currentPage = 1;
 const fileNamePrefix = 'catalogo'; // Prefixo do nome do arquivo (catalogo1, catalogo2, ...)
 
