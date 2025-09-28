@@ -1,4 +1,9 @@
-/* Estrutura de dados: Simula as fotos dentro das pastas */
+// ********** VARIÁVEIS DE CONTROLE **********
+const totalMenuPages = 6; // Total de páginas do seu cardápio
+let currentPage = 1;
+const fileNamePrefix = 'catalogo'; // Prefixo do nome do arquivo (catalogo1, catalogo2, ...)
+
+/* Estrutura de dados: Simula as fotos dentro das pastas da Galeria */
 const galleryData = {
     'pascoa': {
         title: 'Especiais de Páscoa',
@@ -49,7 +54,8 @@ const galleryData = {
     },
 };
 
-/* FUNÇÃO MODIFICADA DE NAVEGAÇÃO ENTRE SEÇÕES COM HISTORY API */
+
+/* FUNÇÃO MODIFICADA DE NAVEGAÇÃO ENTRE SEÇÕES COM HISTORY API (SPA FIX) */
 function showSection(sectionId, shouldPushState = true) {
     // Esconde todas as seções
     const sections = document.querySelectorAll('.section');
@@ -71,12 +77,12 @@ function showSection(sectionId, shouldPushState = true) {
 
     // Garante que a galeria inicie nas pastas
     if (sectionId === 'gallery') {
-        showFolders(false); // Não força pushState aqui
+        showFolders(false); 
     }
 }
 
 
-// ********** NOVAS FUNÇÕES DA GALERIA **********
+// ********** FUNÇÕES DA GALERIA **********
 
 /**
  * Carrega e exibe as fotos de uma pasta específica da galeria.
@@ -136,15 +142,46 @@ function showFolders(shouldPushState = true) {
 }
 
 
-/* EFEITOS INTERATIVOS */
+// ********** FUNÇÕES DO CARDÁPIO (CARROSSEL) **********
+
+/**
+ * Altera a página do cardápio (imagem) e atualiza os controles.
+ * @param {number} direction - 1 para Próxima, -1 para Anterior.
+ */
+function changeMenuPage(direction) {
+    const newPage = currentPage + direction;
+
+    if (newPage >= 1 && newPage <= totalMenuPages) {
+        currentPage = newPage;
+        
+        const imgElement = document.getElementById('menu-page-image');
+        const counterElement = document.getElementById('page-counter');
+        const prevBtn = document.getElementById('prev-page-btn');
+        const nextBtn = document.getElementById('next-page-btn');
+
+        // 1. Atualiza a imagem com o novo nome de arquivo (catalogo1.jpg, catalogo2.jpg, etc.)
+        imgElement.src = `assets/${fileNamePrefix}${currentPage}.jpg`;
+        imgElement.alt = `Página ${currentPage} do Cardápio Cati Cake`;
+
+        // 2. Atualiza o contador
+        counterElement.textContent = `${currentPage} / ${totalMenuPages}`;
+
+        // 3. Atualiza os botões (desabilitar/habilitar)
+        prevBtn.disabled = (currentPage === 1);
+        nextBtn.disabled = (currentPage === totalMenuPages);
+    }
+}
+
+
+/* EFEITOS INTERATIVOS & INICIALIZAÇÃO */
 document.addEventListener('DOMContentLoaded', function() {
-    // [Seu código de animação de cards aqui...]
+    // Add animation to navigation cards
     const cards = document.querySelectorAll('.nav-card');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.2}s`;
     });
 
-    // [Seu código de parallax aqui...]
+    // Add parallax effect to header
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const header = document.querySelector('header');
@@ -159,17 +196,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('popstate', function(event) {
         const state = event.state;
         
-        // Verifica se estamos na seção 'gallery'
         if (state && state.section === 'gallery') {
             if (state.folder) {
                 // Voltou de uma seção externa para uma sub-galeria
                 loadGalleryFolder(state.folder);
-                // Não adiciona novo estado
             } else {
                 // Voltou de uma sub-galeria para as pastas
                 showFolders(false); 
             }
-            return; // Interrompe a execução
+            return; 
         }
         
         // Lógica de navegação entre seções (Home, Biography, Menu)
@@ -187,8 +222,14 @@ document.addEventListener('DOMContentLoaded', function() {
         showSection('gallery', false);
         loadGalleryFolder(initialFolder);
     } else {
-        // Caso contrário, carrega a seção principal (ex: #home ou #gallery)
+        // Caso contrário, carrega a seção principal
         showSection(initialSection, false);
+    }
+    
+    // Inicializa o cardápio (garante que os botões estejam corretos ao iniciar)
+    if (initialSection === 'menu') {
+        currentPage = 1;
+        changeMenuPage(0); // Chamada neutra para apenas atualizar o estado visual
     }
     // ******************************************************
 });

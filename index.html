@@ -115,7 +115,7 @@
 </div>
 
     <div id="biography" class="section">
-        <button class="btn back-btn" onclick="showSection('home')">
+        <button class="btn back-btn" onclick="showSection('home', false)">
             <i class="fas fa-arrow-left"></i> Voltar
         </button>
         <div class="container">
@@ -142,72 +142,29 @@
         </button>
         <div class="container">
             <div class="section-header">
-                <h2>Nosso Cardápio</h2>
-                <p>Sabores únicos criados com ingredientes especiais</p>
+                <h2>Nosso Catálogo Completo</h2>
+                <p>Conheça a nossa variedade de bolos, doces e sobremesas artesanais.</p>
             </div>
-            <div class="menu">
-                <div class="menu-category">
-                    <h3>Bolos Artesanais</h3>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Bolo de Chocolate Premium</span>
-                        <span class="menu-item-price">R$ 45,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Bolo Red Velvet</span>
-                        <span class="menu-item-price">R$ 50,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Bolo de Cenoura Gourmet</span>
-                        <span class="menu-item-price">R$ 40,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Bolo Personalizado</span>
-                        <span class="menu-item-price">Sob consulta</span>
-                    </div>
-                </div>
 
-                <div class="menu-category">
-                    <h3>Doces & Sobremesas</h3>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Brigadeiros Gourmet (cento)</span>
-                        <span class="menu-item-price">R$ 25,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Cupcakes (6 unidades)</span>
-                        <span class="menu-item-price">R$ 30,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Cookies Artesanais (10 unidades)</span>
-                        <span class="menu-item-price">R$ 35,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Torta de Limão</span>
-                        <span class="menu-item-price">R$ 55,00</span>
-                    </div>
-                </div>
+            <div class="menu-image-container">
+                <button class="menu-nav-overlay prev" id="prev-page-btn" onclick="changeMenuPage(-1)" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <img id="menu-page-image" src="assets/catalogo1.jpg" alt="Página 1 do Cardápio Cati Cake" class="full-menu-image">
+                
+                <button class="menu-nav-overlay next" id="next-page-btn" onclick="changeMenuPage(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
 
-                <div class="menu-category">
-                    <h3>Eventos Especiais</h3>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Mesa de Doces (50 pessoas)</span>
-                        <span class="menu-item-price">R$ 300,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Bem Casados (50 unidades)</span>
-                        <span class="menu-item-price">R$ 120,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Docinhos Finos (100 unidades)</span>
-                        <span class="menu-item-price">R$ 180,00</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="menu-item-name">Cesta de Presente</span>
-                        <span class="menu-item-price">A partir de R$ 80,00</span>
-                    </div>
+                <div class="menu-page-counter">
+                    Página <span id="page-counter">1 / 6</span>
                 </div>
+                
+                <p class="image-disclaimer">Preços sujeitos a alteração sem aviso prévio. Para pedidos personalizados, entre em contato via WhatsApp.</p>
             </div>
-        </div>
+            </div>
     </div>
-
+    
     <script src="script.js" defer></script> </body>
 </html>
