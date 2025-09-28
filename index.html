@@ -27,7 +27,7 @@
         <header>
             <div class="container">
                 <div class="logo">
-                    <img src="Cati.jpeg" alt="Cati Cake Logomarca Oficial">
+                    <img src="logomarca.jpeg" alt="Cati Cake Logomarca Oficial">
                 </div>
                 <h1>Cati Cake</h1>
                 <p class="subtitle">Confeitaria Artesanal</p>
@@ -63,52 +63,56 @@
     </div>
 
     <div id="gallery" class="section">
-        <button class="btn back-btn" onclick="showSection('home')">
-            <i class="fas fa-arrow-left"></i> Voltar
-        </button>
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossos Produtos</h2>
-                <p>Cada doce é uma obra de arte feita com ingredientes selecionados</p>
+    <button class="btn back-btn" onclick="showSection('home', false)">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+    <div class="container">
+        <div class="section-header">
+            <h2>Nossos Produtos</h2>
+            <p>Cada doce é uma obra de arte feita com ingredientes selecionados</p>
+        </div>
+
+        <div class="gallery-folders active-view">
+            <div class="folder-item" onclick="loadGalleryFolder('pascoa')">
+                <i class="fas fa-egg"></i>
+                <h4>Páscoa</h4>
             </div>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="assets/bolos-personalizados.jpg" alt="Exemplo de Bolo Personalizado">
-                    <h4>Bolos Personalizados</h4>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-cookie"></i>
-                    </div>
-                    <h4>Cookies Artesanais</h4>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-ice-cream"></i>
-                    </div>
-                    <h4>Cupcakes Gourmet</h4>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h4>Doces para Eventos</h4>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-candy-cane"></i>
-                    </div>
-                    <h4>Sobremesas Especiais</h4>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <h4>Cestas de Presente</h4>
-                </div>
+            <div class="folder-item" onclick="loadGalleryFolder('natal')">
+                <i class="fas fa-holly-berry"></i>
+                <h4>Natal</h4>
             </div>
+            <div class="folder-item" onclick="loadGalleryFolder('bolos')">
+                <i class="fas fa-birthday-cake"></i>
+                <h4>Bolos Personalizados</h4>
+            </div>
+            <div class="folder-item" onclick="loadGalleryFolder('brigadeiros-gourmet')">
+                <i class="fas fa-chocolate"></i>
+                <h4>Brigadeiros Gourmet</h4>
+            </div>
+            <div class="folder-item" onclick="loadGalleryFolder('brigadeiros-tradicionais')">
+                <i class="fas fa-chocolate"></i>
+                <h4>Brigadeiros Tradicionais</h4>
+            </div>
+            <div class="folder-item" onclick="loadGalleryFolder('sobremesas')">
+                <i class="fas fa-ice-cream"></i>
+                <h4>Sobremesas</h4>
+            </div>
+            <div class="folder-item" onclick="loadGalleryFolder('bolos-pote')">
+                <i class="fas fa-jar"></i>
+                <h4>Bolos no Pote</h4>
+            </div>
+            </div>
+
+        <div class="gallery-photos">
+            <button class="btn back-to-folders-btn" onclick="showFolders()">
+                <i class="fas fa-arrow-left"></i> Voltar às Pastas
+            </button>
+            <h3 id="current-folder-title"></h3>
+            <div id="photos-grid" class="gallery-grid">
+                </div>
         </div>
     </div>
+</div>
 
     <div id="biography" class="section">
         <button class="btn back-btn" onclick="showSection('home')">
