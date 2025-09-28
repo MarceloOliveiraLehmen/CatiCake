@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cati Cake - Confeitaria Artesanal | Bolos e Doces Gourmet</title>
+
+    <meta name="description" content="Cati Cake - Confeitaria Artesanal. Bolos personalizados, doces gourmet e sobremesas especiais feitos com amor e dedicação.">
+    <meta name="keywords" content="Cati Cake, Confeitaria Artesanal, Bolos Personalizados, Doces Gourmet, Cardápio de Doces">
+    <meta property="og:title" content="Cati Cake - Confeitaria Artesanal">
+    <meta property="og:description" content="Bolos, doces e sobremesas únicas para seus momentos especiais.">
+    <meta property="og:url" content="[Seu Dominio AQUI]">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    
+    <a href="https://wa.me/5547991541988?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Cati%20Cake." target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="home" class="section active">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="logomarca.png" alt="Cati Cake Logomarca Oficial">
+                </div>
+                <h1>Cati Cake</h1>
+                <p class="subtitle">Confeitaria Artesanal</p>
+            </div>
+        </header>
+
+        <section class="main-nav">
+            <div class="container">
+                <div class="nav-grid">
+                    <div class="nav-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Galeria</h3>
+                        <p>Conheça nossos produtos artesanais feitos com amor e dedicação</p>
+                        <button class="btn" onclick="showSection('gallery')">Ver Produtos</button>
+                    </div>
+
+                    <div class="nav-card">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Sobre a Cati</h3>
+                        <p>Descubra a história e paixão por trás da nossa confeitaria</p>
+                        <button class="btn" onclick="showSection('biography')">Conhecer Cati</button>
+                    </div>
+
+                    <div class="nav-card">
+                        <i class="fas fa-list-alt"></i>
+                        <h3>Cardápio</h3>
+                        <p>Explore nossa variedade de doces e sobremesas artesanais</p>
+                        <button class="btn" onclick="showSection('menu')">Ver Cardápio</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="gallery" class="section">
+        <button class="btn back-btn" onclick="showSection('home')">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Produtos</h2>
+                <p>Cada doce é uma obra de arte feita com ingredientes selecionados</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="assets/bolos-personalizados.jpg" alt="Exemplo de Bolo Personalizado">
+                    <h4>Bolos Personalizados</h4>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h4>Cookies Artesanais</h4>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h4>Cupcakes Gourmet</h4>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Doces para Eventos</h4>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-candy-cane"></i>
+                    </div>
+                    <h4>Sobremesas Especiais</h4>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4>Cestas de Presente</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="biography" class="section">
+        <button class="btn back-btn" onclick="showSection('home')">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+        <div class="container">
+            <div class="section-header">
+                <h2>Conheça a Cati</h2>
+            </div>
+            <div class="biography">
+                <div class="biography-content">
+                    <div class="biography-avatar">
+                        <img src="Cati.jpeg" alt="Foto da Confeiteira Cati">
+                    </div>
+                    <p>Carinhosamente conhecida como Cati, é uma confeiteira apaixonada que transformou seu amor pelos doces em uma arte culinária única.</p>
+                    <p>Com mais de 10 anos de experiência, ela desenvolveu receitas exclusivas que combinam técnicas tradicionais com toques modernos, sempre priorizando ingredientes de qualidade superior.</p>
+                    <p>Cada doce criado pela Cati é uma expressão de carinho e dedicação, feito especialmente para tornar seus momentos ainda mais doces e memoráveis.</p>
+                    <p>Na Cati Cake, acreditamos que cada cliente merece uma experiência única e personalizada, desde o primeiro contato até a entrega do produto final.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu" class="section">
+        <button class="btn back-btn" onclick="showSection('home')">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+        <div class="container">
+            <div class="section-header">
+                <h2>Nosso Cardápio</h2>
+                <p>Sabores únicos criados com ingredientes especiais</p>
+            </div>
+            <div class="menu">
+                <div class="menu-category">
+                    <h3>Bolos Artesanais</h3>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Bolo de Chocolate Premium</span>
+                        <span class="menu-item-price">R$ 45,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Bolo Red Velvet</span>
+                        <span class="menu-item-price">R$ 50,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Bolo de Cenoura Gourmet</span>
+                        <span class="menu-item-price">R$ 40,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Bolo Personalizado</span>
+                        <span class="menu-item-price">Sob consulta</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3>Doces & Sobremesas</h3>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Brigadeiros Gourmet (cento)</span>
+                        <span class="menu-item-price">R$ 25,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Cupcakes (6 unidades)</span>
+                        <span class="menu-item-price">R$ 30,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Cookies Artesanais (10 unidades)</span>
+                        <span class="menu-item-price">R$ 35,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Torta de Limão</span>
+                        <span class="menu-item-price">R$ 55,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3>Eventos Especiais</h3>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Mesa de Doces (50 pessoas)</span>
+                        <span class="menu-item-price">R$ 300,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Bem Casados (50 unidades)</span>
+                        <span class="menu-item-price">R$ 120,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Docinhos Finos (100 unidades)</span>
+                        <span class="menu-item-price">R$ 180,00</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-item-name">Cesta de Presente</span>
+                        <span class="menu-item-price">A partir de R$ 80,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script> </body>
+</html>
