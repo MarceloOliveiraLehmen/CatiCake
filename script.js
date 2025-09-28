@@ -38,6 +38,14 @@ const galleryData = {
             { src: 'assets/brigadeiros-caixa.jpg', alt: 'Caixa de Brigadeiros' },
         ]
     },
+    'brigadeiros-tradicionais': { 
+        title: 'Brigadeiros Tradicionais',
+        photos: [
+            { src: 'assets/brigadeiros-tradicional.jpg', alt: 'Brigadeiro de Chocolate' },
+            { src: 'assets/beijinho.jpg', alt: 'Beijinho' },
+            { src: 'assets/cajuzinho.jpg', alt: 'Cajuzinho' },
+        ]
+    },
     'sobremesas': {
         title: 'Sobremesas Especiais',
         photos: [
@@ -159,8 +167,8 @@ function changeMenuPage(direction) {
         const prevBtn = document.getElementById('prev-page-btn');
         const nextBtn = document.getElementById('next-page-btn');
 
-        // 1. Atualiza a imagem com o novo nome de arquivo (catalogo1.jpg, catalogo2.jpg, etc.)
-        imgElement.src = `assets/${fileNamePrefix}${currentPage}.jpg`;
+        // 1. Atualiza a imagem com o novo nome de arquivo (catalogo1.png, catalogo2.png, etc.)
+        imgElement.src = `assets/${fileNamePrefix}${currentPage}.png`;
         imgElement.alt = `Página ${currentPage} do Cardápio Cati Cake`;
 
         // 2. Atualiza o contador
