@@ -45,11 +45,11 @@ const galleryData = {
             { src: 'assets/sobremesas-cheesecake.jpg', alt: 'Cheesecake' },
         ]
     },
-    'bolos-pote': {
+    'caseirinhos': {
         title: 'Caseirinhos',
         photos: [
-            { src: 'assets/caseirinho-laranja.jpg', alt: 'Caseirinho de Laranja' },
-            { src: 'assets/caseirinho-cenoura.jpg', alt: 'Caseirinho de Cenoura' },
+            { src: 'assets/caseirinhos-laranja.jpg', alt: 'Caseirinho de Laranja' },
+            { src: 'assets/caseirinhos-cenoura.jpg', alt: 'Caseirinho de Cenoura' },
         ]
     },
 };
