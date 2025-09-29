@@ -348,6 +348,7 @@ h1 {
     box-shadow: 0 10px 30px rgba(139, 95, 86, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
+    min-height: 120px;
 }
 
 .folder-item:hover {
@@ -371,9 +372,9 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     color: #8b5f56;
+    margin-bottom: 0;
 }
 
-/* Estilo para a grade de Fotos da Sub-Galeria */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

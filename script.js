@@ -11,7 +11,6 @@ const galleryData = {
             { src: 'assets/pascoa-ovo-colher.jpg', alt: 'Ovo de Colher Gourmet' },
             { src: 'assets/pascoa-coelho-bolo.jpg', alt: 'Bolo temático de Páscoa' },
             { src: 'assets/pascoa-chocolates.jpg', alt: 'Caixa de chocolates artesanais' },
-            // Adicione aqui os caminhos reais para as suas fotos de Páscoa
         ]
     },
     'natal': {
@@ -30,34 +29,27 @@ const galleryData = {
             { src: 'assets/bolos-formatura.jpg', alt: 'Bolo de Formatura' },
         ]
     },
-    'brigadeiros-gourmet': {
-        title: 'Brigadeiros Gourmet',
+    'brigadeiros': {
+        title: 'Brigadeiros',
         photos: [
             { src: 'assets/brigadeiros-pistache.jpg', alt: 'Brigadeiro de Pistache' },
             { src: 'assets/brigadeiros-oreo.jpg', alt: 'Brigadeiro de Oreo' },
             { src: 'assets/brigadeiros-caixa.jpg', alt: 'Caixa de Brigadeiros' },
         ]
     },
-    'brigadeiros-tradicionais': { 
-        title: 'Brigadeiros Tradicionais',
-        photos: [
-            { src: 'assets/brigadeiros-tradicional.jpg', alt: 'Brigadeiro de Chocolate' },
-            { src: 'assets/beijinho.jpg', alt: 'Beijinho' },
-            { src: 'assets/cajuzinho.jpg', alt: 'Cajuzinho' },
-        ]
-    },
     'sobremesas': {
         title: 'Sobremesas Especiais',
         photos: [
-            { src: 'assets/sobremesas-tiramisu.jpg', alt: 'Tiramisu' },
+            { src: 'assets/sobremesas-torta-de-bolacha.jpg', alt: 'Torta de Morango' },
+            { src: 'assets/sobremesas-pudim.jpg', alt: 'Pudim' },
             { src: 'assets/sobremesas-cheesecake.jpg', alt: 'Cheesecake' },
         ]
     },
     'bolos-pote': {
-        title: 'Bolos no Pote',
+        title: 'Caseirinhos',
         photos: [
-            { src: 'assets/pote-red-velvet.jpg', alt: 'Bolo no Pote Red Velvet' },
-            { src: 'assets/pote-cenoura.jpg', alt: 'Bolo no Pote de Cenoura' },
+            { src: 'assets/caseirinho-laranja.jpg', alt: 'Caseirinho de Laranja' },
+            { src: 'assets/caseirinho-cenoura.jpg', alt: 'Caseirinho de Cenoura' },
         ]
     },
 };
